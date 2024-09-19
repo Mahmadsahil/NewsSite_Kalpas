@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import NewsList from "./NewsList";
-// import NewsBox from "./NewsBox";
 import { lazy, Suspense, useEffect, useState } from "react";
 import NewsBoxShimmer from "../Shimmer/NewsBoxShimmer";
 import NewsListShimmer from "../Shimmer/NewsListShimmer";
@@ -9,7 +8,7 @@ const NewsBox = lazy(() => import("./NewsBox"));
 
 const NewsPage = () => {
   const showNews = useSelector((state) => state.app.showNews);
-  const [articles, setArticles] = useState([]);
+  const [articles, setArticles] = useState(MockData);
   const numbers = [0, 1, 2, 3, 4, 5];
 
   useEffect(() => {
