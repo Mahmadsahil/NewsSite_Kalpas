@@ -29,7 +29,7 @@ const SideNavBar = () => {
 
         <div className="px-2">
           <h1 className="text-xs md:text-sm font-semibold">Md Sahil</h1>
-          <p className="text-xs md:text-sm">Heres your news </p>
+          <p className="text-xs md:text-sm">Here's your news </p>
         </div>
       </div>
 
