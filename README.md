@@ -1,7 +1,7 @@
 # NewsSite
 
 ## Live Demo
-[Live Demo](link)
+[Live Demo](https://news-site-kalpas.vercel.app/)
 
 ## Overview
 NewsSite is a responsive news website built with React, featuring integration with the News API from [newsapi.org](https://newsapi.org/). This project is designed to provide users with a seamless and efficient news browsing experience.
