@@ -20,7 +20,6 @@ const NewsPage = () => {
         );
         const data = await response.json();
 
-        console.log(data.a);
         setArticles(data.articles);
       } catch (error) {
         console.error("Error fetching data:", error);
