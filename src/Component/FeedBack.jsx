@@ -70,7 +70,7 @@ const FeedBack = () => {
           <div className="flex md:flex-row flex-col  gap-2 justify-center md:items-center">
             <label htmlFor="country">Country</label>
             <input
-              className="p-2 m-1 rounded-lg md:w-10 w-full"
+              className="p-2 m-1 rounded-lg md:w-40 w-full"
               type="text"
               name=""
               id="country"
@@ -78,7 +78,7 @@ const FeedBack = () => {
 
             <label htmlFor="state">State</label>
             <input
-              className="p-2 m-1 rounded-lg md:w-10 w-full"
+              className="p-2 m-1 rounded-lg md:w-40 w-full"
               type="text"
               name=""
               id="state"
@@ -88,14 +88,14 @@ const FeedBack = () => {
           <div className="flex  md:flex-row flex-col gap-2 justify-center md:items-center">
             <label htmlFor="email">email</label>
             <input
-              className="p-2 m-1 rounded-lg md:w-10 w-full"
+              className="p-2 m-1 rounded-lg md:w-40 w-full"
               type="email"
               name=""
               id="email"
             />
             <label htmlFor="phone">phone</label>
             <input
-              className="p-2 m-1 rounded-lg md:w-10 w-full"
+              className="p-2 m-1 rounded-lg md:w-40 w-full"
               type="number"
               name=""
               id="phone"
