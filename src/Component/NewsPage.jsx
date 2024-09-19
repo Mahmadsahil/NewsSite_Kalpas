@@ -30,29 +30,17 @@ const NewsPage = () => {
 
   return (
     <div className="h-full w-full  md:w-9/12 flex flex-wrap justify-center p-8 md:p-4 gap-4 bg-blue-50 overflow-y-scroll">
-      {articles.length === 0
-        ? MockData.map((data, idx) =>
-            !showNews ? (
-              <Suspense key={idx} fallback={<NewsBoxShimmer />}>
-                <NewsBox data={data} />
-              </Suspense>
-            ) : (
-              <Suspense key={idx} fallback={<NewsListShimmer />}>
-                <NewsList data={data} />
-              </Suspense>
-            )
+      {articles.map((data, idx) =>
+          !showNews ? (
+            <Suspense key={idx} fallback={<NewsBoxShimmer />}>
+              <NewsBox data={data} />
+            </Suspense>
+          ) : (
+            <Suspense key={idx} fallback={<NewsListShimmer />}>
+              <NewsList data={data} />
+            </Suspense>
           )
-        : articles.map((data, idx) =>
-            !showNews ? (
-              <Suspense key={idx} fallback={<NewsBoxShimmer />}>
-                <NewsBox data={data} />
-              </Suspense>
-            ) : (
-              <Suspense key={idx} fallback={<NewsListShimmer />}>
-                <NewsList data={data} />
-              </Suspense>
-            )
-          )}
+        )}
     </div>
   );
 };
