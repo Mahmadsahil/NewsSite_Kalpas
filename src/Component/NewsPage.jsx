@@ -9,7 +9,7 @@ const NewsBox = lazy(() => import("./NewsBox"));
 const NewsPage = () => {
   const showNews = useSelector((state) => state.app.showNews);
   const [articles, setArticles] = useState([]);
-  console.log("articles", articles);
+  const numbers = [0, 1, 2, 3, 4, 5];
 
   useEffect(() => {
     const getAPIData = async () => {
@@ -30,16 +30,21 @@ const NewsPage = () => {
 
   return (
     <div className="h-full w-full  md:w-9/12 flex flex-wrap justify-center p-8 md:p-4 gap-4 bg-blue-50 overflow-y-scroll">
-      
-      {articles.map((data, idx) =>
-        !showNews ? (
-          <Suspense fallback={<NewsBoxShimmer />}>
-            <NewsBox key={idx} data={data} />
-          </Suspense>
-        ) : (
-          <Suspense fallback={<NewsListShimmer/>}>
-            <NewsList key={idx} data={data} />
-          </Suspense>
+      {articles.length === 0 ? (
+        numbers.map((data, idx)=>(
+          <NewsBoxShimmer key={idx} />
+        ))
+      ) : (
+        articles.map((data, idx) =>
+          !showNews ? (
+            <Suspense key={idx} fallback={<NewsBoxShimmer />}>
+              <NewsBox  data={data} />
+            </Suspense>
+          ) : (
+            <Suspense key={idx} fallback={<NewsListShimmer />}>
+              <NewsList  data={data} />
+            </Suspense>
+          )
         )
       )}
     </div>
